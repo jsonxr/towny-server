@@ -1,0 +1,63 @@
+# Here you can change the output of all messages sent to your players via chat.
+# To do so you just have to rewrite the values below. Just be sure to not put any %-variables in the message that were not there to begin with,
+# it will just be displayed as %whateveryouwrote in the message sent.
+#
+# ♰%value stands for an amount of money
+# §4%player§f means either the player executing the command, the player you interact with or the player whose account you want to manipulate
+# %balance stands for the amount of money a player has
+#
+# sender stands for the message the one executing the command gets, target for the other person who is affected.
+# Errors and other messages are only displayed for the one executing the command
+
+playeronly: 'This command can only be run by a player.'
+noperm: 'You do not have permission to transfer Castor.'
+balance: 'Your current balance: §l§a♰%balance'
+vault_balance: 'Vault balance: §l§a♰%balance'
+inv_balance: 'Inventory balance: §l§a♰%balance'
+invalidaccount: 'Invalid account: §4%player§f'
+reload: 'Gringotts: Reloaded configuration!'
+
+pay:
+  success:
+    tax: 'Transaction tax deducted from your account: §c♰%value'
+    sender: 'Sent §a♰%value§f to §4%player§f. '
+    target: 'Received §a♰%value§f from §4%player§f.'
+  insufficientFunds: 'Your account has insufficient balance. Current balance: §l§a♰%balance§f. Required: §a♰%value§f'
+  insufficientSpace:
+    sender: '§4%player§f has insufficient vault space for §a♰%value§f'
+    target: "§4%player§f tried to send §a♰%value§f, but you don't have enough space for that amount."
+  error: 'Your attempt to send §a♰%value§f to §4%player§f failed for unknown reasons.'
+
+deposit:
+  success: 'Deposited §a♰%value§f to your vault.'
+  error: 'Unable to deposit §a♰%value§f to your vault.'
+
+withdraw:
+  success: 'Withdrew §a%value from your vault.'
+  error: 'Unable to withdraw §a♰%value§f from your vault.'
+
+moneyadmin:
+  b: 'Balance of account §4%player§f: §l§a♰%balance'
+  add:
+    sender: 'Added §a♰%value§f to account §4%player§f'
+    target: 'Added to your account: §a♰%value§f'
+    error: 'Could not add ♰%value to account §4%player§f'
+  rm:
+    sender: 'Removed ♰%value from account §4%player§f'
+    target: 'Removed from your account: §a♰%value§f'
+    error: 'Could not remove ♰%value from account §4%player§f'
+
+vault:
+  created: 'Created vault successfully.'
+  error: 'Failed to create vault.'
+  noVaultPerm: 'You do not have permission to create vaults here.'
+
+plugins:
+  vault:
+    insufficientFunds: '§cInsufficient funds.'
+    insufficientSpace: '§cInsufficient space.'
+    unknownError: '§cUnknown failure.'
+    notImplemented: '§cGringotts does not support banks'
+  faction:
+    noFactionVaultPerm: 'You do not have permission to create a faction vault here.'
+    notInFaction: 'Cannot create faction vault: You are not in a faction.'

@@ -1,0 +1,61 @@
+
+# server
+server/purpur*.jar
+server/datapacks/*.zip
+server/libraries
+server/logs
+server/cache
+server/versions
+server/banned-ips.json
+server/banned-players.json
+server/usercache.json
+server/version_history.json
+server/.console_history
+
+# Worlds
+world
+world_nether
+world_the_end
+
+# plugins
+server/plugins/*.jar
+server/plugins/bStats
+server/plugins/ChestShop/languages
+server/plugins/ChestShop/*.log*
+server/plugins/ChestShop/*.db
+server/plugins/ChestShop/version
+server/plugins/ChestShop/jenkinsBuildsNotifier.yml
+server/plugins/CoreProtect/.license
+server/plugins/CoreProtect/*.db
+server/plugins/Essentials/items.json
+server/plugins/Essentials/trade.log
+server/plugins/Essentials/upgrades-done.yml
+server/plugins/Essentials/usermap.csv
+server/plugins/Essentials/userdata
+server/plugins/Gringotts/.uuids-migrated
+server/plugins/Gringotts/*.db*
+server/plugins/LuckPerms/libs
+server/plugins/LuckPerms/translations/repository
+server/plugins/LuckPerms/*.db
+server/plugins/QuickShop/cache
+server/plugins/QuickShop/qs.log
+server/plugins/spark
+server/plugins/Towny/backup
+server/plugins/Towny/data
+server/plugins/Towny/logs
+server/plugins/Towny/settings/lang/reference
+server/plugins/Towny/debtAccountsConverted.txt
+server/plugins/Updater
+server/plugins/Vault
+server/plugins/WorldGuard/cache
+server/plugins/WorldGuard/worlds
+
+# Plugins
+
+# Weird
+mcaselector-2.1.jar
+forks
+
+# Random
+.DS_Store
+.vscode

@@ -1,0 +1,7 @@
+# Should people only be able to build shops inside plots?
+BUILDING_INSIDE_PLOTS: false
+# Should people only be able to build shops inside commercial plots?
+BUILDING_INSIDE_SHOP_PLOTS: true
+# If true, only plot owners are able to build inside a shop plot. If false, every town's resident is able to build there.
+SHOPS_FOR_OWNERS_ONLY: true
+

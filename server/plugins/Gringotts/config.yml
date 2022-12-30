@@ -1,0 +1,104 @@
+# for details on configuration, see https://github.com/MinecraftWars/Gringotts/blob/master/doc/configuration.md
+
+# supported languages: "custom" (default, english), "de" (german), and "pt-BR" (brazilian portuguese).
+language: custom
+
+# regex that create a vault if matches with a sign
+# subpattern 1 denotes the type of the vault.
+vault_pattern: '[^\[]*\[(\w*) ?vault\]'
+
+# If this is set to true, when the user receives an amount of money
+# exceeding the inventory capacity, drop items that didn't fit.
+drop-overflowing-item: true
+
+# currency name and value config
+currency:
+  # currency name to use in messages
+  name:
+    singular: ' '
+    plural: ' '
+
+  # number of decimal digits supported by currency value (0 for whole numbers only)
+  digits: 2
+
+  # Display account balances with individual denomination names
+  named-denominations: false
+
+  # value of individual denominations. default: emerald: 1, emerald block: 9
+  denominations:
+    - material: paper
+      value: 0.25
+      #unit-name: Tharni
+      #unit-name-plural: Tharnis
+      displayname: Tharni
+      #damage: 10
+      #custom_model_data: 1
+      lore:
+        - Coin of the Realm
+        - (1/4 Castars)
+
+    - material: paper
+      value: 1
+      #unit-name: Castar
+      #unit-name-plural: Castars
+      displayname: Castar
+      #damage: 10
+      #custom_model_data: 1
+      lore:
+        - Coin of the Realm
+
+    - material: gold_nugget
+      value: 10
+      #unit-name: Castar
+      #unit-name-plural: Castars
+      displayname: Gold Piece
+      #damage: 10
+      #custom_model_data: 1
+      lore:
+        - Coin of the Realm
+        - (10 Castars)
+
+    - material: gold_ingot
+      value: 100
+      #unit-name: Castar
+      #unit-name-plural: Castars
+      displayname: Gold Crown
+      #damage: 10
+      #custom_model_data: 1
+      lore:
+        - Coin of the Realm
+        - (100 Castars)
+
+    - material: diamond
+      value: 1000
+      #unit-name: Castar
+      #unit-name-plural: Castars
+      #displayname: Gold Crown
+      #damage: 10
+      #custom_model_data: 1
+      # lore:
+      #   - Coin of the Realm
+      #   - (100 Castars)
+
+# tax on /money pay transactions
+transactiontax:
+  flat: 0.0
+  rate: 0.02
+
+# balance to start an account with (purely virtual)
+startingbalance:
+  player: 0
+  town: 0
+  nation: 0
+
+# globally (dis)allow use of vault types
+usevault:
+  container: true
+  enderchest: true
+  # if true, denomination items located in shulker boxes, in the above enabled inventories, will be included to the denomination finding process
+  include-shulker-boxes: false
+
+# whether money/balance commands show vault and inventory balance separately
+balance:
+  show-vault: true
+  show-inventory: true
